@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* header & footer */
+body{@apply bg-gray-100}
+body header{@apply flex md:justify-between  bg-gray-100 h-10 uppercase md:px-4 shadow-md}
+.title-signup{@apply flex md:items-center}
+body header h1{@apply font-bold md:text-xl text-red-500}
+h2{@apply font-bold text-sm text-red-500 md:pl-2}
+.pages{@apply flex md:items-center md:px-10 }
+body header h2{@apply mx-4 hover:scale-125 transition ease-out duration-500}
+body footer{@apply mt-2 text-center py-6 bg-gray-200  font-semibold text-lg shadow-md}
+
+/* home page */
+.main{@apply mt-12 mx-12}
+.load{@apply text-xl text-center mt-2}
+.content{@apply grid grid-cols-4 my-8 md:mx-12}
+.pro{@apply flex-col my-4 ml-4 w-fit hover:border-blue-500 border border-black } 
+.img{@apply min-h-60}
+.details{@apply p-2 border border-t-black bg-white shadow-md font-semibold}
+.name{@apply text-2xl mb-1}
+.rowPro{@apply flex flex-row justify-between items-center text-xl}
+.cart{@apply flex items-center text-blue-500 hover:text-gray-500}
+.delete-button{@apply flex items-center text-red-500 hover:text-gray-500}
+
+/*form.js*/
+.content-form{@apply flex justify-center my-12 }
+label{@apply block text-red-500 font-bold mb-1}
+input{@apply block border-2 border-blue-400 w-96 h-10}
+.textarea{@apply block border-2 border-blue-400 w-96  h-40 }
+.submit{@apply block bg-blue-500 text-white rounded-full px-2 py-1 hover:bg-gray-500}
+
+/*cart page*/
+.mainCart{@apply flex justify-center}
+.contentCart{@apply flex-col w-fit my-8 md:mx-12 max-w-md}
+.titleCart,
+.total{@apply mb-8 text-center text-blue-500 text-2xl font-bold}
+.rowCart{@apply flex justify-between items-center p-2 my-4 shadow-md text-2xl font-bold text-red-500}
+.linkPay{@apply  bg-blue-500 text-white text-sm rounded-full px-2 py-1 w-fit hover:bg-gray-500}
+.proCart{@apply flex flex-row justify-between space-x-8 items-center mb-1 border border-blue-500 text-lg}
+.qu{@apply flex border-none font-bold text-blue-500 w-10 h-fit bg-gray-100}
+
+/*oneProduct*/
+.mainDtails{@apply flex justify-center my-12}
+.contentDtails{@apply flex-col w-fit max-w-md}
+.formComment{@apply flex flex-col ml-4 my-4}
+.inputComment{@apply block border-2 border-blue-400 w-96 h-20 mb-1}
+.inputRatingDiv{@apply flex flex-row items-center }
+/* .inputRating{@apply mr-1} */
+.interactions{@apply flex flex-col ml-4 my-4}
+.comment{@apply border rounded-xl border-blue-500  p-2 mb-1}
+.createdAt{@apply flex flex-row items-center justify-between}
+.rate{@apply text-xl text-yellow-600}
+
+/* search input*/
+.formSearch{@apply flex justify-center text-lg}
+.searchInput{@apply px-1 mr-1 border rounded-lg border-blue-500 }
+.submitSearch{@apply  text-blue-500  rounded-full px-2 py-2 hover:text-gray-500}
+
+.star-rating {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.star-rating label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.star-rating input[type='radio'] {
+  display: none;
+}
+
+.star-rating .star {
+  color: #ccc;
+}
+
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+  color: orange;
+}
+
+.star-rating .star.checked,
+.star-rating .star.checked ~ .star {
+  color: orange;
+}
